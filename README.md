@@ -5,4 +5,5 @@ I have decided to practice again with a To-Do List to refresh them. This seemed 
 right project to poke around and incorporate using Vite in a fun and efficient way
 (which is what Vite is all about, right?).
 
-In this exercise I am recalling a bit of my React Hooks and Components knowledge.
+In this exercise I am recalling a bit of my React Hooks and Components knowledge and poking
+around my code by using Web Dev Simplified's tutorial as a jumping off point.
