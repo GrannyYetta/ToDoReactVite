@@ -58,7 +58,7 @@ setToDos(currentToDos => {
     <>
     <NewToDoForm onSubmit={addToDo}/>
     <h1 className="header">To-Do List</h1>
-    <ToDoList />
+    <ToDoList toDos={toDos} toggleToDo={toggleToDo} deleteToDo={deleteToDo} />
     </>
   )
 }
