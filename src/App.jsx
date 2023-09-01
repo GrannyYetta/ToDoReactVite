@@ -1,13 +1,31 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./styles.css"
-import NewToDoForm from "./NewToDoForm"
-import ToDoList from "./ToDoList"
+import NewToDoForm from "./components/NewToDoForm"
+import ToDoList from "./components/ToDoList"
 
 
 function App() {
-  // Here I am using the state to add items to a list (which is in this case an array)
-  const [toDos, setToDos] = useState([])
 
+  // HOOKS
+
+  // Here I am using the state to add items to a list (which is in this case an array)
+  const [toDos, setToDos] = useState(() => {
+
+    // here I make sure my useState first looks whether I have anything saved in local storage (aka localValue)
+    //  and getting it if it exists. Otherwise it defaults to an empty array.
+    const localValue = localStorage.getItem("ITEMS")
+    if (localValue == null) return []
+
+    return JSON.parse(localValue)
+  });
+  
+// Everytime the to-do's are modified, I save new values in the local storage, thus modifying the existing to-do's(items) list(array)
+
+  useEffect(() => {
+    localStorage.setItem("ITEM", JSON.stringify(toDos))
+  }, [toDos])
+
+// HELPER FUNCTIONS
   function addToDo(title) {
     // Now I add a to-do to the list(array)...
         setToDos((currentToDos) => {
@@ -54,6 +72,7 @@ setToDos(currentToDos => {
 })
 }
 
+// JSX
   return (
     <>
     <NewToDoForm onSubmit={addToDo}/>

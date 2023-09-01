@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function NewToDoForm({ onSubmit }) {
+function NewToDoForm({ onSubmit }) {
       // Here I am using state to add an item
 
   const [newItem, setNewItem] = useState("");
@@ -23,4 +23,6 @@ export function NewToDoForm({ onSubmit }) {
             <button className="btn">Add</button>
         </form> 
     )
-};
+}
+
+export default NewToDoForm

@@ -2,7 +2,7 @@ import ToDoItem  from "./ToDoItem"
 
 
 
-export function ToDoList({toDos, toggleToDo, deleteToDo}) {
+function ToDoList({toDos, toggleToDo, deleteToDo}) {
     return (
         <ul className="list">
             {toDos.length === 0 && "No to-do's"}
@@ -13,3 +13,5 @@ export function ToDoList({toDos, toggleToDo, deleteToDo}) {
         </ul>
     )
 }
+
+export default ToDoList

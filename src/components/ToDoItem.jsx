@@ -1,6 +1,6 @@
 
 
-export function ToDoItem({completed, id, title, toggleToDo, deleteToDo}) {
+function ToDoItem({completed, id, title, toggleToDo, deleteToDo}) {
     return (
         <li >
             <label>
@@ -16,3 +16,5 @@ export function ToDoItem({completed, id, title, toggleToDo, deleteToDo}) {
                  </li>
     )
 }
+
+export default ToDoItem
