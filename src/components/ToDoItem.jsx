@@ -1,6 +1,14 @@
-
+import PropTypes from "prop-types";
 
 function ToDoItem({completed, id, title, toggleToDo, deleteToDo}) {
+
+   ToDoItem.propTypes = {
+        completed: PropTypes.any,
+        id: PropTypes.any,
+        toggleToDo: PropTypes.any,
+        title: PropTypes.any,
+        deleteToDo: PropTypes.any
+    }
     return (
         <li >
             <label>

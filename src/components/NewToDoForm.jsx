@@ -1,4 +1,7 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
+
+
 
 function NewToDoForm({ onSubmit }) {
       // Here I am using state to add an item
@@ -14,6 +17,10 @@ function NewToDoForm({ onSubmit }) {
       // The following function will ensure that the input area gets cleared after submitting a to-do(item)
         setNewItem("")
        }
+
+       NewToDoForm.propTypes = {
+        onSubmit: PropTypes.any
+    }
     return (
         <form onSubmit={handleSubmit} className="new-item-form" >
             <div className="form-row">
